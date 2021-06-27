@@ -3,6 +3,7 @@ import QuestionCard from "./Components/QuestionCard";
 import { fetchQuestions } from "./Services/API";
 import { Difficulty, QuestionState } from "./Services/API";
 import { GlobalStyle, Wrapper } from "./App.styles";
+import Logo from "./Images/quiz-logo.png";
 
 export type AnswerObject = {
   question: string;
@@ -68,7 +69,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>QUIZ</h1>
+        <img className="Image" src={Logo} alt="React Quiz" />
         {gameOver || userAnswers.length === Total_Questions ? (
           <button className="Start" onClick={startQuiz}>
             Start
